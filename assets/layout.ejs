@@ -217,18 +217,22 @@
             <td class="w180">(=) Valor cobrado</td>
         </tr>
         <tr class="cp h12 rBb Ab">
+            <td><%= formatAmount(boleto['desconto_abatimento']) || '' %></td>
             <td></td>
+            <td><%= formatAmount(boleto['juros_multa']) || '' %></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td class="Ar">&nbsp;</td>
+            <td class="Ar"><%= formatAmount((boleto['valor']+boleto['juros_multa']-boleto['desconto_abatimento'])) || '' %>&nbsp;</td>
         </tr>
     </table><table class="w666">
         <tr class="ct h13">
             <td class="w659">Pagador</td>
         </tr>
         <tr class="cp h12">
-            <td><%- boleto['pagador'] || '' %></td>
+            <td><%- ((boleto['pagador_nome'] ? boleto['pagador_nome']+' - ' : '') +
+                     (boleto['pagador_documento'] ? 'CNPJ/CPF: '+boleto['pagador_documento']+'</br>' : '') +
+                     (boleto['pagador_logradouro_numero'] ? boleto['pagador_logradouro_numero']+'</br>' : '') +
+                     (boleto['pagador_cidade_estado_cep'] ? boleto['pagador_cidade_estado_cep'] : '')
+                ) %></td>
         </tr>
         <tr class="cp h12 rBb">
             <td></td>
@@ -313,7 +317,10 @@
         <tr class="rc6">
             <td class="w478">
                 <div class="ctN pL10">Instruções (Texto de responsabilidade do beneficiário)</div>
-				<div class="cpN pL10"><%- boleto['instrucoes'] || '' %></div>
+                <div class="cpN pL10"><%-((boleto['instrucoes'] ? boleto['instrucoes']+'</br>':'') +
+                                          (boleto['juros_multa'] ? '</br>Juros/Multa:  '+formatAmount(boleto['juros_multa']):'') + 
+                                          (boleto['desconto_abatimento'] ? '</br>Desconto/Abatimento: '+formatAmount(boleto['juros_multa']):''))
+                                          %></div>
             </td>
             <td class="w186">
                 <div class="t">(-) Desconto / Abatimentos</div>
@@ -333,7 +340,11 @@
             <td class="w659">Pagador</td>
         </tr>
         <tr class="cp h12">
-			<td class="At"><%- boleto['pagador'] || '' %></td>
+			<td class="At"><%- ((boleto['pagador_nome'] ? boleto['pagador_nome']+' - ' : '') +
+                (boleto['pagador_documento'] ? 'CNPJ/CPF: '+boleto['pagador_documento']+'</br>' : '') +
+                (boleto['pagador_logradouro_numero'] ? boleto['pagador_logradouro_numero']+'</br>' : '') +
+                (boleto['pagador_cidade_estado_cep'] ? boleto['pagador_cidade_estado_cep'] : '')
+           ) %></td>
         </tr>
     </table><table class="w666">
         <tr class="rBb">

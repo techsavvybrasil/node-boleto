@@ -74,5 +74,5 @@ exports.linhaDigitavel = function (barcodeData) {
 };
 
 exports.parseEDIFile = function (fileContent) {
-  console.log('Not implemented');
+  console.log('Not implemented'); 
 };

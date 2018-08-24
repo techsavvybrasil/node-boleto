@@ -217,11 +217,11 @@
             <td class="w180">(=) Valor cobrado</td>
         </tr>
         <tr class="cp h12 rBb Ab">
-            <td><%= formatAmount(boleto['desconto_abatimento']) || '' %></td>
+            <td><%= formatAmount(zeroifEmpty(boleto['desconto_abatimento']) || '') %></td>
             <td></td>
-            <td><%= formatAmount(boleto['juros_multa']) || '' %></td>
+            <td><%= formatAmount(zeroifEmpty(boleto['juros_multa']) || '') %></td>
             <td></td>
-            <td class="Ar"><%= formatAmount((boleto['valor']+boleto['juros_multa']-boleto['desconto_abatimento'])) || '' %>&nbsp;</td>
+            <td class="Ar"><%= formatAmount(zeroifEmpty(boleto['valor'])) || '' %>&nbsp;</td>
         </tr>
     </table><table class="w666">
         <tr class="ct h13">

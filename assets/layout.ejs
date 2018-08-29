@@ -4,6 +4,7 @@
   <title>Visualização de boleto</title>
   <meta name="robots" content="noindex"> 
   <meta name="format-detection" content="telephone=no"/>
+  <meta charset="utf-8"/>
   <style media="screen, print" type="text/css">
   body
   {
@@ -276,7 +277,7 @@
             <td class="w180">Agência / Código beneficiário</td>
         </tr>
         <tr class="cp h12 rBb">
-			<td><%= boleto['cedente'] %></td>
+			<td><%= boleto['cedente'] %> - CNPJ: 08.022.117/0001-88</td>
 			<td class="Ar"><%= boleto['agencia'] %>/<%= boleto['codigo_cedente'] %></td>
         </tr>
     </table><table class="w666">

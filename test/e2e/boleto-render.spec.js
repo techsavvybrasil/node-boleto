@@ -17,7 +17,10 @@ const createBoleto = (bank) => new Boleto({
   'agencia': '1229',
   'codigo_cedente': '469',
   'carteira': '25',
-  'pagador': 'Nome do pagador\nCPF: 000.000.000-00<script>alert(1)</script>',
+  'pagador_nome': 'Nome do pagador',
+  'pagador_documento':'0000000000',
+  'pagador_logradouro_numero': 'Rua Henrique Dummont, 2123',
+  'pagador_cidade_estado_cep': 'Ribeirão Preto-SP-14022355',
   'local_de_pagamento': 'PAGÁVEL EM QUALQUER BANCO ATÉ O VENCIMENTO.',
   'instrucoes': 'Sr. Caixa, aceitar o pagamento e não cobrar juros após o vencimento.<script>alert(1)</script>'
 })

@@ -5,6 +5,7 @@ module.exports = (bankLogo, bankNumber, linhaDigitavel, barcode, bmpBarcode) => 
       <title>Visualização de boleto</title>
       <meta name="robots" content="noindex">
       <meta name="format-detection" content="telephone=no"/>
+      <meta charset="utf-8"/>
       <style media="screen, print" type="text/css">
       body
       {
@@ -213,18 +214,18 @@ module.exports = (bankLogo, bankNumber, linhaDigitavel, barcode, bmpBarcode) => 
                 <td class="w180">(=) Valor cobrado</td>
             </tr>
             <tr class="cp h12 rBb Ab">
+                <td>R$ 0,00</td>
                 <td></td>
+                <td>R$ 0,00</td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td class="Ar">&nbsp;</td>
+                <td class="Ar">&nbsp;R$ 15,00</td>
             </tr>
         </table><table class="w666">
             <tr class="ct h13">
                 <td class="w659">Pagador</td>
             </tr>
             <tr class="cp h12">
-                <td>Nome do pagador<br/>CPF: 000.000.000-00&lt;script&gt;alert(1)&lt;/script&gt;</td>
+                <td>Nome do pagador - CNPJ/CPF: 0000000000</br>Rua Henrique Dummont, 2123</br>Ribeirão Preto-SP-14022355</td>
             </tr>
             <tr class="cp h12 rBb">
                 <td></td>
@@ -268,7 +269,7 @@ module.exports = (bankLogo, bankNumber, linhaDigitavel, barcode, bmpBarcode) => 
                 <td class="w180">Agência / Código beneficiário</td>
             </tr>
             <tr class="cp h12 rBb">
-          <td>Pagar.me Pagamentos S/A</td>
+          <td>Pagar.me Pagamentos S/A - CNPJ: 08.022.117/0001-88</td>
           <td class="Ar">1229/469</td>
             </tr>
         </table><table class="w666">
@@ -309,7 +310,7 @@ module.exports = (bankLogo, bankNumber, linhaDigitavel, barcode, bmpBarcode) => 
             <tr class="rc6">
                 <td class="w478">
                     <div class="ctN pL10">Instruções (Texto de responsabilidade do beneficiário)</div>
-            <div class="cpN pL10">Sr. Caixa, aceitar o pagamento e não cobrar juros após o vencimento.&lt;script&gt;alert(1)&lt;/script&gt;</div>
+            <div class="cpN pL10">Sr. Caixa, aceitar o pagamento e não cobrar juros após o vencimento.&lt;script&gt;alert(1)&lt;/script&gt;</br></div>
                 </td>
                 <td class="w186">
                     <div class="t">(-) Desconto / Abatimentos</div>
@@ -329,7 +330,7 @@ module.exports = (bankLogo, bankNumber, linhaDigitavel, barcode, bmpBarcode) => 
                 <td class="w659">Pagador</td>
             </tr>
             <tr class="cp h12">
-          <td class="At">Nome do pagador<br/>CPF: 000.000.000-00&lt;script&gt;alert(1)&lt;/script&gt;</td>
+            <td class="At">Nome do pagador - CNPJ/CPF: 0000000000</br>Rua Henrique Dummont, 2123</br>Ribeirão Preto-SP-14022355</td>
             </tr>
         </table><table class="w666">
             <tr class="rBb">
@@ -350,7 +351,7 @@ module.exports = (bankLogo, bankNumber, linhaDigitavel, barcode, bmpBarcode) => 
             <tr>
           <td class="EcdBar Al pL10">
 
-            ${barcode ? `<div class="barcode">${barcode}</div>` : '<div class="barcode"/>'}
+            ${barcode ? `<div class="barcode"> ${barcode}</div>` : '<div class="barcode"/>'}
 
           </td>
             </tr>

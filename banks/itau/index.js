@@ -1,6 +1,6 @@
-var formatters = require('../../lib/formatters'),
-  ediHelper = require('../../lib/edi-helper'),
-  helper = require('./helper');
+var formatters = require('../../lib/formatters')
+  //ediHelper = require('../../lib/edi-helper'),
+  //helper = require('./helper');
   
 exports.options = {
   logoURL: 'https://s3.amazonaws.com/mailer.pagpop.com.br/img_ti/banco_itau_logo.jpg',

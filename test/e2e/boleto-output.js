@@ -114,6 +114,7 @@ module.exports = (bankLogo, bankNumber, linhaDigitavel, barcode, bmpBarcode) => 
       .w659{width:659px}
       .w666{width:666px}
       .w667{width:667px}
+      .pb{padding-bottom: 2px}
       .BHead td{border-bottom:solid 2px #000}
       .EcdBar{height:50px;vertical-align:bottom}
       .rc6 td{vertical-align:top;border-bottom:solid 1px #000;border-left:solid 1px #000}
@@ -175,7 +176,7 @@ module.exports = (bankLogo, bankNumber, linhaDigitavel, barcode, bmpBarcode) => 
                 <td class="barra"></td>
           <td class="w72 Ab bc Ac">${bankNumber}</td>
                 <td class="barra"></td>
-          <td class="w500 Ac ld" id="linha-digitavel-1">${linhaDigitavel}</td>
+          <td class="w500 Ac Ab ld pb" id="linha-digitavel-1">${linhaDigitavel}</td>
             </tr>
         </table><table class="w666">
             <tr class="ct h13 At">
@@ -252,7 +253,7 @@ module.exports = (bankLogo, bankNumber, linhaDigitavel, barcode, bmpBarcode) => 
                 <td class="barra"></td>
           <td class="w72 Ab bc Ac">${bankNumber}</td>
                 <td class="barra"></td>
-          <td class="w500 Ac ld" id="linha-digitavel-2">${linhaDigitavel}</td>
+          <td class="w500 Ac Ab ld pb" id="linha-digitavel-2">${linhaDigitavel}</td>
             </tr>
         </table><table class="w666">
             <tr class="ct h13">

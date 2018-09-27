@@ -175,7 +175,7 @@ module.exports = (bankLogo, bankNumber, linhaDigitavel, barcode, bmpBarcode) => 
                 <td class="barra"></td>
           <td class="w72 Ab bc Ac">${bankNumber}</td>
                 <td class="barra"></td>
-          <td class="w500 Ar Ab ld" id="linha-digitavel-1">${linhaDigitavel}</td>
+          <td class="w500 Ac ld" id="linha-digitavel-1">${linhaDigitavel}</td>
             </tr>
         </table><table class="w666">
             <tr class="ct h13 At">
@@ -252,7 +252,7 @@ module.exports = (bankLogo, bankNumber, linhaDigitavel, barcode, bmpBarcode) => 
                 <td class="barra"></td>
           <td class="w72 Ab bc Ac">${bankNumber}</td>
                 <td class="barra"></td>
-          <td class="w500 Ar Ab ld" id="linha-digitavel-2">${linhaDigitavel}</td>
+          <td class="w500 Ac ld" id="linha-digitavel-2">${linhaDigitavel}</td>
             </tr>
         </table><table class="w666">
             <tr class="ct h13">
